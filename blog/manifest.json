@@ -1,0 +1,14 @@
+{
+  "enabled": false,
+  "posts": [
+    {
+      "slug": "template",
+      "date": "2026-07-01",
+      "title": "Template Update",
+      "summary": "A sample post to test the archive, Markdown, images, and captions.",
+      "cover": "assets/template/cover.svg",
+      "src": "posts/template.md",
+      "published": true
+    }
+  ]
+}

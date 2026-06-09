@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Template image placeholder</title>
+  <desc id="desc">A minimal placeholder image for testing the monthly digest layout.</desc>
+  <rect width="1200" height="760" fill="#f2eadc"/>
+  <path d="M0 570C160 500 260 520 388 590C540 674 690 650 840 558C970 478 1070 452 1200 492V760H0Z" fill="#d8c6a5"/>
+  <path d="M0 628C150 580 302 596 438 654C586 718 730 704 878 626C1002 560 1110 548 1200 582V760H0Z" fill="#42614c" opacity=".82"/>
+  <circle cx="914" cy="218" r="86" fill="#c6533c" opacity=".9"/>
+  <rect x="92" y="92" width="1016" height="576" rx="34" fill="none" stroke="#26332d" stroke-opacity=".14" stroke-width="3"/>
+  <text x="112" y="146" fill="#2e657f" font-family="Avenir Next, Trebuchet MS, Verdana, sans-serif" font-size="26" font-weight="800" letter-spacing="8">MONTHLY DIGEST</text>
+  <text x="112" y="236" fill="#26332d" font-family="Georgia, Times New Roman, serif" font-size="86" font-weight="800">Template image</text>
+  <text x="116" y="300" fill="#72685d" font-family="Avenir Next, Trebuchet MS, Verdana, sans-serif" font-size="31">Replace with a real photo when the first update is ready.</text>
+</svg>

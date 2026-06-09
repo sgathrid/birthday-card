@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f1e8">
+  <title>Verification</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="shell">
+    <section class="screen screen-verify" aria-labelledby="page-title">
+      <header class="header">
+        <p class="kicker">Birthday access</p>
+        <h1 id="page-title">Verify identity</h1>
+        <p class="lede">
+          A short security check before opening the note. This is mostly ceremonial,
+          but standards have to mean something.
+        </p>
+      </header>
+
+      <form class="panel" id="verify-form">
+        <div class="panel-header">
+          <div>
+            <p class="panel-label">Step 1 of 2</p>
+            <h2>Security questions</h2>
+          </div>
+          <span class="status-pill" id="status-pill">Pending</span>
+        </div>
+
+        <div class="checks">
+          <label class="check-row">
+            <input type="checkbox" id="check-stains">
+            <span class="check-box" aria-hidden="true"></span>
+            <span>
+              <strong>Can remove stains I had already accepted as permanent</strong>
+              <small>Required credential</small>
+            </span>
+          </label>
+
+          <label class="check-row check-row-trap">
+            <input type="checkbox" id="check-sleep">
+            <span class="check-box" aria-hidden="true"></span>
+            <span>
+              <strong>Believes my sleep schedule is fine</strong>
+              <small>Control question</small>
+            </span>
+          </label>
+        </div>
+
+        <div class="question">
+          <label for="food-input">Security question</label>
+          <p>The dinner that can reliably get me across town:</p>
+          <div class="answer" id="answer-row">
+            <input id="food-input" type="text" autocomplete="off" placeholder="Enter answer">
+          </div>
+        </div>
+
+        <p class="hint" id="hint" aria-live="polite" hidden></p>
+
+        <button class="primary" id="submit-btn" type="submit">
+          Access birthday gift
+        </button>
+      </form>
+    </section>
+  </main>
+
+  <script src="verify.js"></script>
+</body>
+</html>
