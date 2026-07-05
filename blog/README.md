@@ -8,7 +8,7 @@ When the first real update is ready, set it to `true`.
 ## Publish a new update
 
 1. Add a Markdown file under `posts/`, named by month, for example `posts/2026-07.md`.
-2. Add that month's images under `assets/2026-07/`.
+2. Add that month's web-ready images under `assets/2026-07/`.
 3. Add one entry to `manifest.json`.
 4. Set `"enabled": true` when the archive should appear from the gift page.
 
@@ -36,7 +36,7 @@ Example manifest:
 Use normal Markdown image syntax. Put the caption on the next line in italics:
 
 ```md
-![Coffee shop window](../assets/2026-07/window.jpg)
+![Coffee shop window](assets/2026-07/window.jpg)
 *Rainy morning, good coffee, questionable umbrella decision.*
 ```
 

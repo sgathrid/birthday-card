@@ -74,30 +74,44 @@ function validateManifestPost(post, index, seenSlugs) {
 function validateMarkdownImages(filePath) {
   const markdown = readFileSync(filePath, "utf8");
   const imagePattern = /!\[[^\]]*]\(([^)\s]+)(?:\s+"[^"]*")?\)/g;
+  const htmlImagePattern = /<img\b[^>]*\bsrc=["']([^"']+)["'][^>]*>/gi;
+  const videoPattern = /<video\b[^>]*\bsrc=["']([^"']+)["'][^>]*>/gi;
   let match;
 
-  while ((match = imagePattern.exec(markdown)) !== null) {
-    const imagePath = match[1];
-
+  function validateMarkdownAsset(assetPath, type) {
     if (
-      imagePath.startsWith("#") ||
-      imagePath.startsWith("data:") ||
-      isExternalUrl(imagePath)
+      assetPath.startsWith("#") ||
+      assetPath.startsWith("data:") ||
+      isExternalUrl(assetPath)
     ) {
-      continue;
+      return;
     }
 
-    const decodedPath = decodeURI(imagePath.split("#")[0].split("?")[0]);
-    const resolved = path.resolve(path.dirname(filePath), decodedPath);
+    const decodedPath = decodeURI(assetPath.split("#")[0].split("?")[0]);
+    const resolved = decodedPath.startsWith("assets/")
+      ? path.resolve(blogDir, decodedPath)
+      : path.resolve(path.dirname(filePath), decodedPath);
 
     if (!resolved.startsWith(blogDir)) {
-      fail(`${path.relative(root, filePath)} image escapes blog/: ${imagePath}`);
-      continue;
+      fail(`${path.relative(root, filePath)} ${type} escapes blog/: ${assetPath}`);
+      return;
     }
 
     if (!existsSync(resolved)) {
-      fail(`${path.relative(root, filePath)} image does not exist: ${imagePath}`);
+      fail(`${path.relative(root, filePath)} ${type} does not exist: ${assetPath}`);
     }
+  }
+
+  while ((match = imagePattern.exec(markdown)) !== null) {
+    validateMarkdownAsset(match[1], "image");
+  }
+
+  while ((match = htmlImagePattern.exec(markdown)) !== null) {
+    validateMarkdownAsset(match[1], "image");
+  }
+
+  while ((match = videoPattern.exec(markdown)) !== null) {
+    validateMarkdownAsset(match[1], "video");
   }
 }
 

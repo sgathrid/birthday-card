@@ -9,9 +9,9 @@ blog/assets/2026-07/
   walk-home.jpg
 ```
 
-Reference images from Markdown with a path relative to the Markdown file:
+Reference images from Markdown with a path relative to `blog/post.html`:
 
 ```md
-![Dinner table](../assets/2026-07/dinner.jpg)
+![Dinner table](assets/2026-07/dinner.jpg)
 *Caption goes here.*
 ```

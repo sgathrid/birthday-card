@@ -1,6 +1,16 @@
 {
-  "enabled": false,
+  "enabled": true,
   "posts": [
+    {
+      "slug": "2026-06",
+      "date": "2026-06-01",
+      "title": "June Recap",
+      "summary": "Sailing, kiting, work, and Napa for the 4th.",
+      "cover": "assets/2026-06/dryc-kids.jpg",
+      "src": "posts/2026-06.md",
+      "version": "2026-07-05-gallery",
+      "published": true
+    },
     {
       "slug": "template",
       "date": "2026-07-01",
@@ -8,7 +18,7 @@
       "summary": "A sample post to test the archive, Markdown, images, and captions.",
       "cover": "assets/template/cover.svg",
       "src": "posts/template.md",
-      "published": true
+      "published": false
     }
   ]
 }

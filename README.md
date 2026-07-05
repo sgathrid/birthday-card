@@ -46,10 +46,10 @@ To publish a new monthly update:
      walk.jpg
    ```
 
-3. In the Markdown file, reference images relative to the Markdown file:
+3. In the Markdown file, reference images from the rendered blog page:
 
    ```md
-   ![Dinner table](../assets/2026-07/dinner.jpg)
+   ![Dinner table](assets/2026-07/dinner.jpg)
    *Dinner after a long travel day.*
    ```
 
@@ -91,7 +91,8 @@ blog/
 ```
 
 The live blog uses only `blog/posts/` for Markdown and `blog/assets/` for
-images. Do not create root-level `posts/` or `assets/updates/` folders.
+images. Use browser-friendly assets such as `.jpg`, `.png`, `.webp`, and `.mp4`.
+Do not create root-level `posts/` or `assets/updates/` folders.
 
 ## Template Post
 

@@ -8,7 +8,7 @@ the first real one, or copy it and rename the copy by month.
 This is where the actual update goes: what happened, where I went, what I saw,
 and the details I would usually forget to send.
 
-![Quiet placeholder image](../assets/template/cover.svg)
+![Quiet placeholder image](assets/template/cover.svg)
 *Captions go directly under images in italics. Keep them short and specific.*
 
 ## A few notes
@@ -20,6 +20,6 @@ and the details I would usually forget to send.
 ## How to publish the real first post
 
 1. Copy this file to `blog/posts/2026-07.md`.
-2. Add images to `blog/assets/2026-07/`.
+2. Add web-ready images to `blog/assets/2026-07/`.
 3. Add the post to `blog/manifest.json`.
 4. Delete or unpublish this template entry when you no longer need it.
